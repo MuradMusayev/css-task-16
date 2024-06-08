@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #1a9ac9;
+}
+.container {
+  margin-top: 4rem;
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  .header {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .cards {
+    background-color: #ffffff;
+    padding-block: 2px;
+    gap: 1px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .card {
+      width: 33%;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      img {
+        width: 100%;
+        vertical-align: middle;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.card:first-child {
+  animation-name: anim5;
+}
+.card:nth-child(2),
+.card:nth-child(9) {
+  animation-name: anim1;
+}
+.card:nth-child(6),
+.card:nth-child(7) {
+  animation-name: anim2;
+}
+.card:nth-child(3),
+.card:nth-child(4) {
+  animation-name: anim3;
+}
+.card:nth-child(5) {
+  animation-name: anim6;
+}
+.card:nth-child(8) {
+  animation-name: anim4;
+}
+
+@keyframes anim1 {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-231px);
+  }
+}
+@keyframes anim2 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-131px);
+  }
+}
+@keyframes anim3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(131px);
+  }
+}
+@keyframes anim4 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-261px);
+  }
+}
+@keyframes anim5 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(231px, 0px);
+  }
+  100% {
+    transform: translate(231px, 131px);
+  }
+}
+@keyframes anim6 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0px, 131px);
+  }
+  100% {
+    transform: translate(231px, 131px);
+  }
+}
